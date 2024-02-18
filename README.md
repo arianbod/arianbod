@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @arianbod
 - 👀 I’m interested in JavaScript, ReactJS, Data science
-- 🌱 I’m currently learning working with big data, AI
+- 🌱 I’m currently learning big data, AI
 - 💞️ I’m looking to collaborate on excited new things
 - 📫 Feel free to reach me on the LinkedIn @Arianbod and arianbod[at]outlook.com
 
