@@ -1,47 +1,43 @@
-# hey, i'm arian
+# Amin Abtahi
 
-I build web apps. Mostly Next.js, React, and whatever else the job needs. Been writing code since 2014.
+AI/ML engineer and researcher. My work sits where machine learning meets SAR/satellite remote sensing, seismic risk, and Bayesian calibration. I also build full-stack web and mobile products, which is how most of the research below actually ships and gets used.
 
-Academic side is dense too — finished a Master's in MIS (Management Information Systems) about five years back, then Data Science last year, and I'm wrapping up a third in ECE (Electrical and Computer Engineering) in the next few months. That ECE thesis is the earthquake-modeling work below — it's already produced two first-author conference papers.
+- GitHub: [@arianbod](https://github.com/arianbod) (handle `arianbod`, name Amin Abtahi — legal: Seyed Mohammad Amin Abtahi)
+- Project site: [quakewise.com](https://quakewise.com)
+- ORCID: [0009-0009-4175-7636](https://orcid.org/0009-0009-4175-7636)
 
-Right now most of my time goes to:
-- Full-stack Next.js (App Router, server actions, the whole thing)
-- AI-integrated apps — wiring Gemini, Claude, and OpenAI tools into real products
-- Data science work — stitching raw data sources together and pulling out insights with actual DS models and algorithms, not just SQL dashboards
-- Some React Native when mobile is the right call
-- Picking up Rust on the side
+## Research
 
-## what's actually worth looking at
+**QuakeWise — building-level seismic damage from physics + satellite data.** ([quakewise.com](https://quakewise.com))
 
-**[nextjs-fs-earthquake](https://github.com/arianbod/nextjs-fs-earthquake)** — earthquake impact estimator for buildings. This is my active ECE Master's thesis project. Two first-author conference papers have come out of it so far. Step-form UX, better-auth, Vitest, deployed on Vercel. The project I've put the most real engineering into.
+The core method is a reliability-tempered Bayesian late fusion. It combines a physics-based fragility prior with a satellite damage likelihood, and each source's weight is set by its own measured calibration through an inverse-Brier reliability temper, so a source that turns out to be unreliable gets discounted automatically rather than by hand.
 
-**[gemini-live-next](https://github.com/arianbod/gemini-live-next)** — Gemini Live API wired into a Next.js app. Small but working playground.
+I validated it on about 80,917 real buildings across four earthquakes: Türkiye 2023, Noto 2024, Morocco 2023, and Haiti 2021. The headline result is expected calibration error dropping from 0.42 to 0.03. I also report where it does not help: the gain shows up mainly where hazard varies across the scene, and it narrows under a harder spatial-block split. QuakeWise is the thesis for my MSc in Electrical and Computer Engineering (supervisor Dr. Hamid Farrokh Ghatte).
 
-**[hls-video-to-audio](https://github.com/arianbod/hls-video-to-audio)** — takes an HLS video link and streams just the audio. Built it because I needed it one weekend.
+Methods and tools: Python, PyTorch, physics-informed neural networks, computer vision, Bayesian inference, SAR and optical remote sensing.
 
-**[ai-agent-bundle-on-nextjs](https://github.com/arianbod/ai-agent-bundle-on-nextjs)** — the boilerplate I keep reaching for when I start a new agentic app.
+**Publications.** Two first-author conference papers from this line of work (Greece 2025, Bosnia 2026). A journal article extending the fusion method is in preparation.
 
-Most other repos here are course assignments or forks I've been studying. Don't read too much into them.
+**Background.** Three Master's degrees: MIS, an MSc in Data Science (2025), and the MSc in Electrical and Computer Engineering currently in progress with QuakeWise as the thesis.
 
-## research
+## Selected work
 
-Two first-author papers from the earthquake-impact work (my active ECE thesis), both accepted:
-- Conference in Greece — 2025
-- Conference in Bosnia — May 2026
+- **[nextjs-fs-earthquake](https://github.com/arianbod/nextjs-fs-earthquake)** — the QuakeWise application and MSc thesis project: a building-level earthquake-damage estimator. The research front end where the fusion model meets a usable interface.
+- **[quakewise-paperb-replication](https://github.com/arianbod/quakewise-paperb-replication)** — replication package for the reliability-tempered Bayesian fusion paper: code, canonical results, and provenance/lineage manifests so the numbers can be reproduced.
+- **[quakewise-platform](https://github.com/arianbod/quakewise-platform)** — QuakeWise V2, a three-layer system: Next.js gateway, Expo mobile app, and a FastAPI/Python AI backend that serves the model.
+- **[gemini-live-next](https://github.com/arianbod/gemini-live-next)** — real-time voice and video chat wired to the Google Gemini Live API in Next.js.
+- **[ai-agent-bundle-on-nextjs](https://github.com/arianbod/ai-agent-bundle-on-nextjs)** — a multimodal voice-assistant starter (voice, video, screen share, file upload) I reuse when starting a new agentic app.
 
-Happy to share PDFs if you want context.
+## Engineering
 
-## stack i actually use
+The day-to-day engineering that supports the research and pays the bills:
 
-**Web** — Next.js 15/16 · TypeScript · Prisma · Postgres (Neon) · Tailwind · shadcn/ui · TanStack Query · better-auth · Vercel
-*(used next-auth for years, migrated to better-auth — worth the swap.)*
+- **Full-stack web** — Next.js (App Router, server actions), TypeScript, React, Prisma, Postgres (Neon), Tailwind, shadcn/ui, TanStack Query, deployed on Vercel
+- **Mobile** — React Native / Expo
+- **AI integration** — wiring Gemini, Claude, and OpenAI models into production products
+- **Data / ML** — Python, PyTorch, pandas, scikit-learn, Jupyter; joining messy real-world sources and training models on them
+- Currently learning Rust
 
-**Mobile** — React Native / Expo when the project calls for it
+## Links
 
-**Data** — Python, R, Pandas / scikit-learn / Jupyter. Doing this for real, not just from the master's: joining raw sources, running ML/DS models, building insights out of messy data.
-
-Heading toward: Rust, more security research, deeper ML work.
-
-## reach
-
-LinkedIn — [in/arianbod](https://linkedin.com/in/arianbod)
+[GitHub](https://github.com/arianbod) · [quakewise.com](https://quakewise.com) · [ORCID 0009-0009-4175-7636](https://orcid.org/0009-0009-4175-7636)
