@@ -1,4 +1,4 @@
-# Amin Abtahi
+
 
 AI/ML engineer and researcher. My work sits where machine learning meets SAR/satellite remote sensing, seismic risk, and Bayesian calibration. I also build full-stack web and mobile products, which is how most of the research below actually ships and gets used.
 
